@@ -97,13 +97,13 @@ Max-Sharpe optimizer with:
 - SPY buy & hold shows larger drawdown (~-19.34%)
 
 Results (before optimization):
-![Baseline results](result.png)
+![Baseline results](assets/result.png)
 
 Results (after portfolio optimization):
-![Optimized portfolio results](result_using_portfolio.png)
+![Optimized portfolio results](assets/result_using_portfolio.png)
 
 SPY buy & hold:
-![SPY buy & hold](result_sp500.png)
+![SPY buy & hold](assets/result_sp500.png)
 
 ### Metrics Table (Before vs After vs SPY)
 All results use initial capital $500,000.
@@ -181,5 +181,5 @@ Educational/research use only. Not financial advice.
 
 ## Repository Contents
 - `Group6_FinalTerm.ipynb` — main notebook with strategy design, optimizer, and backtest
-- `result.png` — baseline results (pre-optimization)
-- `result_using_portfolio.png` — results using optimized portfolio
+- `assets/result.png` — baseline results (pre-optimization)
+- `assets/result_using_portfolio.png` — results using optimized portfolio
