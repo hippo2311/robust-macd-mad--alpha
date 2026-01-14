@@ -23,7 +23,6 @@ Goals:
 
 ## Repository Contents
 - `Group6_FinalTerm.ipynb` — main notebook with strategy design, optimizer, and backtest
-- `Group6_FinalTerm.pdf` — exported report
 - `result.png` — baseline results (pre-optimization)
 - `result_using_portfolio.png` — results using optimized portfolio
 
