@@ -84,6 +84,13 @@ Max-Sharpe optimizer with:
 - Exponentially-weighted mean returns
 - Analytical efficient frontier with long-only constraint
 
+### How the Portfolio Is Selected
+1) Apply an equal-weighted portfolio across all candidate stocks.
+2) Run the strategy on a prior training window.
+3) Rank stocks by strategy performance in that window.
+4) Select the strongest performers and assign final weights
+   (equal-weight or optimized weights if MPT is enabled).
+
 ## Results Snapshot (2018-2019 Test)
 - Before optimization: ~26.09% annualized, Sharpe ~1.81
 - After optimization: ~32.87% annualized, Sharpe ~1.93, Max DD ~-9.43%
@@ -94,6 +101,33 @@ Results (before optimization):
 
 Results (after portfolio optimization):
 ![Optimized portfolio results](result_using_portfolio.png)
+
+SPY buy & hold:
+![SPY buy & hold](result_sp500.png)
+
+### Metrics Table (Before vs After vs SPY)
+All results use initial capital $500,000.
+
+| Metric | Before Opt | After Opt | SPY B&H |
+| --- | --- | --- | --- |
+| Final Portfolio Value | 793,144.00 | 880,327.12 | 622,283.68 |
+| Total Return | 58.63% | 76.07% | 24.03% |
+| CAGR | 26.09% | 32.87% | 11.62% |
+| Annualized Volatility | 13.32% | 15.29% | 14.96% |
+| Sharpe Ratio | 1.81 | 1.93 | 0.80 |
+| Max Drawdown | -10.34% | -9.43% | -19.34% |
+| Calmar Ratio | 5.67 | 8.06 | 1.24 |
+| Beta vs Benchmark | 0.5750 | 0.5043 | - |
+| Alpha (annual, %) | 17.19 | 23.56 | - |
+| Sortino Ratio | 2.33 | 2.73 | 0.96 |
+| Omega Ratio | 1.40 | 1.43 | 1.16 |
+| Ulcer Index | 2.44 | 2.71 | 4.99 |
+| UPI (UP Ratio) | 0.60 | 0.64 | 0.51 |
+| Skewness | -0.1736 | 0.2323 | -0.5263 |
+| Kurtosis | 6.0024 | 4.2945 | 3.8150 |
+| VaR 95% (% loss) | 1.13 | 1.43 | 1.76 |
+| CVaR 95% (% loss) | 1.90 | 2.04 | 2.47 |
+| Total Trades | 484 | 278 | 1 |
 
 ## Reproducibility / How to Run
 ### Notebook Entry Point
